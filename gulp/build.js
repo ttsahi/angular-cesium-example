@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
+var traceur = require('gulp-traceur');
 
 var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
@@ -19,6 +20,7 @@ gulp.task('injector:css', ['wiredep'], function () {
 
 gulp.task('scripts', function () {
   return gulp.src('src/{app,components}/**/*.js')
+    //.pipe(traceur({experimental: true, blockBinding: true, arrayComprehension: true}))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'));
 });

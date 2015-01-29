@@ -28,6 +28,7 @@
         position="billboard.position">
       </billboards-layer>
 
+
       <labels-layer>Just
         <label ng-repeat="label in labels.getData()"
                text="label.text"
@@ -46,7 +47,7 @@
     </map>
   </div>
   <div class="forms">
-    <h3>Maps</h3>
+    <h3>Maps 1</h3>
     <div ng-repeat="map in maps">
       {{ map.name }} <button ng-click="maps.splice(maps.indexOf(map),1);">Remove</button>
     </div>
