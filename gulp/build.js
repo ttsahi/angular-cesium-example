@@ -20,7 +20,7 @@ gulp.task('injector:css', ['wiredep'], function () {
 
 gulp.task('scripts', function () {
   return gulp.src('src/{app,components}/**/*.js')
-    //.pipe(traceur({experimental: true, blockBinding: true, arrayComprehension: true}))
+    .pipe(traceur({experimental: true, blockBinding: true, arrayComprehension: true}))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'));
 });
