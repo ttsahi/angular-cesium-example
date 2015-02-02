@@ -61,7 +61,7 @@
             if(clientY !== null){
               let deltaY = clientY - event.clientY;
               clientY = event.clientY;
-console.log(currentLevel);
+
               if(deltaY > 0 && currentLevel - 1 >= minLevel){
                 currentLevel--;
                 pointer.css('top', currentLevel * levelValue + '%');
