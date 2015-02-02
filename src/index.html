@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bower_components/CesiumUnminified/Widgets/CesiumWidget/CesiumWidget.css">
     <!-- build:css({.tmp,src}) styles/app.css -->
     <!-- inject:css -->
@@ -29,7 +29,7 @@
       </billboards-layer>
 
 
-      <labels-layer>Just
+      <labels-layer>
         <label ng-repeat="label in labels.getData()"
                text="label.text"
                color="label.color"
@@ -44,6 +44,7 @@
           <!--</complex-part>-->
         <!--</complex>-->
       <!--</complexes-layer>-->
+      <toolbar></toolbar>
     </map>
   </div>
   <div class="forms">

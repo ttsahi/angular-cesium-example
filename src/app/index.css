@@ -132,3 +132,19 @@ a {
 hr {
   clear: both;
 }
+
+.toolbar{
+  position: absolute;
+  background-color: #000;
+  width: 50px;
+  height: auto;
+  padding: 3px;
+  border: solid 2px #555;
+  text-align: center;
+  z-index: 10;
+}
+.drag-button{
+  color: #555;
+  font-size: x-large;
+  cursor: -webkit-grab;
+}
