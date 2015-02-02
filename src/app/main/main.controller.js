@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angularCesium')
-  .controller('MainCtrl', function ($scope, ObservableCollection) {
+  .controller('MainCtrl', function ($scope, ObservableCollection, ExampTool) {
     $scope.newLayer = {};
     $scope.layers = [];
     $scope.billboards = new ObservableCollection();
@@ -33,10 +33,13 @@ angular.module('angularCesium')
     });
     $scope.newLabel = {};
 
+
     $scope.cars = [{
       position : {
         latitude : 31,
         longitude : 56
       }
     }];
+
+    $scope.exampTool = ExampTool;
   });

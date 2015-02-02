@@ -22,20 +22,22 @@ gulp.task('scripts', function () {
   return gulp.src('src/{app,components}/**/*.js')
     .pipe(traceur({experimental: true, blockBinding: true, arrayComprehension: true}))
     .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'));
+    .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe(gulp.dest('build/'));
 });
 
 gulp.task('injector:js', ['scripts', 'injector:css'], function () {
   return gulp.src(['src/index.html', '.tmp/index.html'])
     .pipe($.inject(gulp.src([
-      'src/{app,components}/**/*.js',
-      '!src/{app,components}/**/*.spec.js',
-      '!src/{app,components}/**/*.mock.js'
+      'build/{app,components}/**/*.js',
+      '!build/{app,components}/**/*.spec.js',
+      '!build/{app,components}/**/*.mock.js'
     ]).pipe($.angularFilesort()), {
+      addPrefix: '..',
       ignorePath: 'src',
       addRootSlash: false
     }))
-    .pipe(gulp.dest('src/'));
+    .pipe(gulp.dest('./src'));
 });
 
 gulp.task('partials', function () {
