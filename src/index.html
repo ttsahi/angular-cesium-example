@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="../bower_components/CesiumUnminified/Widgets/CesiumWidget/CesiumWidget.css">
     <!-- build:css({.tmp,src}) styles/app.css -->
     <!-- inject:css -->
     <link rel="stylesheet" href="app/index.css">
+    <link rel="stylesheet" href="app/tools/zoom/zoom-widget.css">
     <!-- endinject -->
     <!-- endbuild -->
 
@@ -45,6 +48,7 @@
         <!--</complex>-->
       <!--</complexes-layer>-->
       <tool-bar>
+        <tool type="zoomTool" template="../app/tools/zoom/zoom-tool.html"></tool>
         <tool type="exampTool" template="../app/tools/examp-tool/examp-tool.template.html"></tool>
       </tool-bar>
     </map>
@@ -150,9 +154,11 @@
 
     <!-- build:js({.tmp,src}) scripts/app.js -->
     <!-- inject:js -->
+    <script src="../build/app/tools/zoom/zoom-widget.drv.js"></script>
+    <script src="../build/app/tools/zoom/zoom-tool.js"></script>
     <script src="../build/app/tools/examp-tool/examp-tool.js"></script>
-    <script src="../build/components/navbar/navbar.controller.js"></script>
     <script src="../build/app/main/main.controller.js"></script>
+    <script src="../build/components/navbar/navbar.controller.js"></script>
     <script src="../build/app/index.js"></script>
     <!-- endinject -->
 
