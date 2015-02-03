@@ -6,8 +6,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="../bower_components/CesiumUnminified/Widgets/CesiumWidget/CesiumWidget.css">
+    <link rel="stylesheet" href="../bower_components/angular-cesium/src/map-components/tools/zoom/zoom-widget.css">
     <!-- build:css({.tmp,src}) styles/app.css -->
     <!-- inject:css -->
     <link rel="stylesheet" href="app/index.css">
@@ -44,7 +47,11 @@
           <!--</complex-part>-->
         <!--</complex>-->
       <!--</complexes-layer>-->
-      <toolbar> </toolbar>
+      <tool-bar>
+        <tool type="zoomTool">
+          <zoom-widget min="10" max="20" style="position: relative; width: 50px; height: 200px;"></zoom-widget>
+        </tool>
+      </tool-bar>
     </map>
   </div>
   <div class="forms">
@@ -136,6 +143,7 @@
     </div>
   </div>
 
+  <script src="../node_modules/gulp-traceur/node_modules/traceur/bin/traceur-runtime.js"></script>
     <script src="../bower_components/CesiumUnminified/Cesium.js"></script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -147,9 +155,10 @@
 
     <!-- build:js({.tmp,src}) scripts/app.js -->
     <!-- inject:js -->
-    <script src="components/navbar/navbar.controller.js"></script>
-    <script src="app/main/main.controller.js"></script>
-    <script src="app/index.js"></script>
+    <script src="../build/app/tools/examp-tool/examp-tool.js"></script>
+    <script src="../build/components/navbar/navbar.controller.js"></script>
+    <script src="../build/app/main/main.controller.js"></script>
+    <script src="../build/app/index.js"></script>
     <!-- endinject -->
 
     <!-- inject:partials -->
