@@ -117,3 +117,19 @@ a {
 hr {
   clear: both;
 }
+
+.toolbar{
+  position:absolute;
+  width: 50px;
+  height: auto;
+  padding: 3px;
+  border: solid #555;
+  background-color: #000;
+  text-align: center;
+  z-index: 10;
+}
+
+.drag-button{
+  font-size: x-large;
+  cursor: -webkit-grab;
+}
