@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angularCesium')
-  .controller('MainCtrl', function ($scope, ObservableCollection, ExampTool, ZoomTool) {
+  .controller('MainCtrl', function ($scope, ObservableCollection, ZoomTool) {
     $scope.newLayer = {};
     $scope.layers = [];
     $scope.billboards = new ObservableCollection();
@@ -41,6 +41,5 @@ angular.module('angularCesium')
       }
     }];
 
-    $scope.exampTool = ExampTool;
     $scope.zoomTool = ZoomTool;
   });
