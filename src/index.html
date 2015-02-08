@@ -48,8 +48,11 @@
         <!--</complex>-->
       <!--</complexes-layer>-->
       <toolbar>
-        <tool type="zoomTool">
+        <tool type="zoom">
           <zoom-widget min="10" max="20"  height="150"></zoom-widget>
+        </tool>
+        <tool type="zoomArea">
+          <button ng-click="tool.start()">Start</button>
         </tool>
       </toolbar>
     </map>
@@ -149,6 +152,7 @@
     <!-- bower:js -->
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/observable-collection/observableCollection.js"></script>
+    <script src="../bower_components/angular-mocks/angular-mocks.js"></script>
     <script src="../bower_components/angular-cesium/dist/angular-cesium.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
