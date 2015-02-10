@@ -133,3 +133,7 @@ hr {
   font-size: x-large;
   cursor: -webkit-grab;
 }
+
+.tool {
+  margin-bottom: 15px;
+}
