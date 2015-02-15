@@ -137,9 +137,7 @@ hr {
 
 .hand {
   background: url("../assets/images/hand.png") no-repeat;
-  height: 30px;
-  margin: 15%;
-  background-size: contain;
+
 }
 .hand:hover{
   margin: 20%;
@@ -156,5 +154,10 @@ hr {
 }
 
 .tool {
-  margin-bottom: 15px;
+  height: 30px;
+  margin: 15%;
+  background-size: contain !important;
+}
+.zoom-area {
+  background: url("../assets/images/cell-0-8-480.png") no-repeat;
 }
