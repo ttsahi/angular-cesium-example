@@ -51,6 +51,12 @@
         <tool type="zoomTool">
           <zoom-widget min="10" max="20"  height="150"></zoom-widget>
         </tool>
+        <tool type="diversionTool">
+          <div ng-init="initClass = 'hand'" ng-class="initClass" ng-click="tool.start()" ></div>
+        </tool>
+        <tool type="centerTool">
+          <div ng-init="initClass = 'centerTool glyphicon glyphicon-record'"  ng-class="initClass" ng-click="tool.start()" ></div>
+        </tool>
       </toolbar>
     </map>
   </div>
