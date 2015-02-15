@@ -133,3 +133,23 @@ hr {
   font-size: x-large;
   cursor: -webkit-grab;
 }
+
+.hand {
+  background: url("../assets/images/hand.png") no-repeat;
+  height: 30px;
+  margin: 15%;
+  background-size: contain;
+}
+.hand:hover{
+  margin: 20%;
+}
+
+.centerTool {
+  height: 30px;
+  margin: 15%;
+  color: #ffffff;
+  font-size: 1.3em;
+}
+.centerTool:hover {
+  font-size: 1em;
+}
