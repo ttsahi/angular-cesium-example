@@ -119,15 +119,16 @@ hr {
 }
 
 .toolbar{
-  position: absolute;
-  background-color: #000;
+  position:absolute;
   width: 50px;
   height: auto;
   padding: 3px;
-  border: solid 2px #555;
+  border: solid #555;
+  background-color: #000;
   text-align: center;
   z-index: 10;
 }
+
 .drag-button{
   color: #555;
   font-size: x-large;
@@ -152,4 +153,8 @@ hr {
 }
 .centerTool:hover {
   font-size: 1em;
+}
+
+.tool {
+  margin-bottom: 15px;
 }

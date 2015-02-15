@@ -48,8 +48,11 @@
         <!--</complex>-->
       <!--</complexes-layer>-->
       <toolbar>
-        <tool type="zoomTool">
-          <zoom-widget min="10" max="20"  height="150"></zoom-widget>
+        <tool type="zoom" class="tool">
+          <zoom-widget min="0" max="200" start="100" height="150"></zoom-widget>
+        </tool>
+        <tool type="zoomArea" class="tool">
+          <img ng-src="/assets/images/cell-0-8-480.png" height="42" ng-click="tool.toggle();">
         </tool>
         <tool type="diversionTool">
           <div ng-init="initClass = 'hand'" ng-class="initClass" ng-click="tool.start()" ></div>
@@ -163,6 +166,7 @@
     <!-- build:js({.tmp,src}) scripts/app.js -->
     <!-- inject:js -->
     <script src="../build/components/navbar/navbar.controller.js"></script>
+    <script src="../build/app/main/person.js"></script>
     <script src="../build/app/main/main.controller.js"></script>
     <script src="../build/app/index.js"></script>
     <!-- endinject -->
